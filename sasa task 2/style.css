@@ -1,0 +1,1247 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chakra Petch" ;
+    outline: none;
+}
+
+:root{
+    --color-primary: #cbfe1c;
+    --color-dark: #0b0e13;
+    --color-light: #f1f1f1;
+    --color-red-400: #ff6467;
+    --color-red-500: #fb2c36;
+    --color-red-600: #e7000b;
+    --color-red-900: #82181a;
+    --color-green-400: #05df72;
+    --color-green-600: #00a63e;
+    --color-gray-300: #d1d5dc;
+    --color-gray-400: #99a1af;
+    --color-gray-600: #4a5565;
+    --color-gray-700: #364153;
+    --color-gray-800: #1e2939;
+    --color-gray-900: #101828;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-dark);
+    width: 100%;
+    height: 8vh;
+    z-index: 10000;
+}
+
+nav .nav-inner{
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav .nav-component .logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--color-primary);
+    align-items: center;
+}
+
+nav .nav-component .logo i{
+    color: inherit;
+    font-size: 22px;
+}
+
+nav .nav-component .logo h2{
+    color: inherit;
+    font-size: 22px;
+}
+
+nav .nav-component .nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .nav-component .nav-links .nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: .2s ease;
+}
+
+nav .nav-component .nav-links .nav-link:focus{
+    color: var(--color-primary);
+}
+
+nav .nav-component .nav-links .nav-link:hover{
+    color: var(--color-primary);
+}
+
+nav .nav-component:nth-child(2){
+    gap: 20px;
+}
+
+nav .nav-component .icons{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+nav .nav-component .icons:hover{
+    color: var(--color-primary);
+}
+
+nav .nav-component .nav-button{
+    position: relative;
+    background-color: var(--color-primary);
+    font-size: 18px;
+    color: var(--color-dark);
+    border-radius: 10px;
+    padding: 8px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+nav .nav-component .nav-button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60px;
+    background: linear-gradient(to right, transparent,rgba(255, 255, 255, 0.7),transparent);
+    width: 60px;
+    height: 100%;
+    transition: 0.3s linear;
+    transform: rotate(40deg);
+}
+
+nav .nav-component .nav-button:hover{
+    background-color: rgba(203, 254, 28, 0.9);
+}
+
+nav .nav-component .nav-button:hover::before{
+    left: calc(100% + 60px);
+}
+
+
+main{
+    width: 100%;
+    margin-top: 8vh;
+}
+
+header{
+    position: relative;
+    height: 92vh;
+    background: url("images/hero-bg.jpg");
+    background-size: cover;
+}
+
+.header-inner{
+    max-width: 1380px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+header .dark-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+}
+
+header .col{
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 100;
+}
+
+header .col .title{
+    font-size: 58px;
+    font-weight: 900;
+    color: #fff;
+}
+
+header .col .title * {
+    font-family: 'Days One';
+}
+
+header .col .title span.green{
+    color: var(--color-primary);
+}
+
+header .col p{
+    color: var(--color-gray-400);
+    font-size: 18px;
+}
+
+header .col .buttons{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+header .col .buttons .button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 31px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+header .col .buttons .button.filled{
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+header .col .buttons .button.empty{
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 3px var(--color-primary) solid;
+}
+
+header .col .buttons .button.empty:hover{
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+
+header .col .buttons .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60px;
+    background: linear-gradient(to right, transparent,rgba(255, 255, 255, 0.5),transparent);
+    width: 60px;
+    height: 100%;
+    transition: 0.2s linear;
+}
+
+header .col .buttons .button:hover::before{
+    left: calc(100% + 60px);
+}
+
+/* header .col .buttons .button:nth-child(2)::before{
+    transition-delay: .2s;
+} */
+
+
+
+header .col .img{
+    position: relative;
+}
+
+header .col .img img{
+    width: 570px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px var(--color-primary) solid;
+}
+
+header .col .img .active-players{
+    position: absolute;
+    bottom: -30px   ;
+    left: -30px;
+    background-color: var(--color-dark);
+    border-radius: 15px;
+    border: 1px var(--color-gray-600) solid;
+    padding: 20px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .col .img .active-players .icon{
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
+header .col .img .active-players h5{
+    font-weight: 400;
+    color: var(--color-gray-400);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+header .col .img .active-players h2{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+section{
+    background-color: var(--color-dark);
+    width: 100%;
+}
+
+.whatwedo-inner,
+.team-inner,
+.contact-inner,
+.footer-inner,
+.games-inner{
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 60px;
+}
+
+section .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .title .green-title{
+    position: relative;
+    letter-spacing: 4px;
+    font-size: 18px;
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+section .title .green-title::before{
+    content: "";
+    position: absolute;
+    left: calc(-50% + -25px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to left , var(--color-primary) , var(--color-dark));
+}
+
+section .title .green-title::after{
+    content: "";
+    position: absolute;
+    right: calc(-50% + -25px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right , var(--color-primary) , var(--color-dark));
+}
+
+section.team .title .green-title::before{
+    left: calc(-65% + -25px);
+}
+
+section.team .title .green-title::after{
+    right: calc(-65% + -25px);
+}
+
+section .title .white-title{
+    color: #fff;
+    font-size: 48px;
+    font-family: 'Days One';
+    font-weight: 900;
+}
+
+.games .ga-game-img{
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.games .ga-controls{
+    text-align: center;
+    margin-top: 45px;
+}
+
+.games .ga-arrow{
+    border: 2px var(--color-gray-600) solid;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    background-color: transparent;
+    transition: .2s ease;
+}
+
+.games .ga-arrow i{
+    font-size: 20px;
+    color: var(--color-gray-600);
+    transition: .2s ease;
+}
+
+.games .ga-arrow:hover{
+    border: 2px var(--color-primary) solid;
+}
+
+.games .ga-arrow:hover i{
+    color: var(--color-primary);
+}
+
+.games .ga-view-all{
+    color: var(--color-primary);
+    border: 2px var(--color-primary) solid;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 13px 25px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-left: 25px;
+    transition: .2s ease;
+}
+
+.games .ga-view-all:hover{
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.whatwedo .title .sub-title{
+    color: #fff;
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.whatwedo .title .sub-title span{
+    color: var(--color-primary);
+}
+
+.whatwedo .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.whatwedo .cards .card{
+    position: relative;
+    width: 270px;
+    height: 270px;
+    border: 1px var(--color-gray-600) solid;
+    background-color: #1a1a1a;
+    /* padding: 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    color: #fff;  
+    transition: 0.2s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.whatwedo .cards .card:nth-child(3)::before,
+.whatwedo .cards .card:nth-child(3)::after,
+.whatwedo .cards .card:nth-child(6)::before,
+.whatwedo .cards .card:nth-child(6)::after{
+    display: none;
+}
+
+
+.whatwedo .cards .card::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: var(--color-primary);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    transition: .2s ease;
+}
+
+.whatwedo .cards .card::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background-color: var(--color-primary);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    transition: .2s ease;
+
+}
+
+.whatwedo .cards .card:hover{
+    border: 1px var(--color-primary) solid;
+}
+
+.whatwedo .cards .card:hover::before{
+    top: 15px;
+    left: 15px;
+}
+
+.whatwedo .cards .card:hover::after{
+    bottom: 15px;
+    right: 15px;
+}
+
+.whatwedo .cards .card img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.whatwedo .cards .card .icon{
+    background-color: var(--color-gray-800);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: var(--color-primary);
+    transition: .4s ease;
+}
+
+.whatwedo .cards .card:hover .icon{
+    background-color: var(--color-primary);
+    color: var(--color-gray-800);
+}
+
+
+.whatwedo .cards .card .text *{
+    font-family: "Days One" !important;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+.team .title .sub-title,
+.contact .title .sub-title{
+    color: var(--color-gray-400);
+    font-size: 20px;
+}
+
+.team .cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 25px;
+}
+
+.team .cards .card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;  
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: none;
+    flex-direction: row;
+}
+
+.team .cards .card::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    backdrop-filter: grayscale(100%);
+    z-index: 1000;
+    transition: 0.4s linear;
+    border: none;
+}
+
+.team .cards .card:hover{
+    filter: grayscale(0);
+}
+
+.team .cards .card:hover::before{
+    top: -100%;
+}
+
+
+.team .cards .card img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    object-fit: cover;
+} 
+
+.team .cards .card .text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    z-index: 100;
+    gap: 20px;
+}
+
+.team .cards .card .text .name{
+    font-size: 22px;
+    font-family: "Days One" !important;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 10px;
+    
+}
+
+.team .cards .card .text .game{
+    font-size: 16px;
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+.team .cards .card .text .status{
+    font-size: 14px;
+    color: var(--color-gray-300);
+    font-weight: 300;
+}
+
+.team .cards .card .text .name-90deg{
+    font-size: 18px;
+    font-family: "Days One" !important;
+    color: var(--color-primary);
+    font-weight: 200;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.glowing-line {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  max-width: 60%;        
+  margin: 0 auto;       
+  background: linear-gradient(to right,transparent,var(--color-primary) 20%,var(--color-primary) 80%,transparent);
+}
+
+.glowing-line::after {
+  content: "";
+  position: absolute;
+  inset: -3px 0;
+  background: inherit;     
+  filter: blur(8px);
+  opacity: 0.8;
+}
+
+.looping-images{
+    padding-bottom: 150px 0;
+    background-color: var(--color-dark);
+}
+
+.looping-images-inner{
+    position: relative;
+}
+
+.looping-images-inner::before{
+    position: absolute;
+    content: "";
+    background-color: var(--color-primary);
+    width: 70%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    filter: blur(60px);
+    -webkit-filter: blur(60px);
+}
+
+.looping-images-inner .ga-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.looping-images-inner .ga-track {
+  width: max-content;
+  animation-duration: 40s;            
+  animation-timing-function: linear;  
+  animation-iteration-count: infinite;
+}
+
+.looping-images-inner .ga-left  { 
+    animation-name: scroll-left; 
+}
+
+.looping-images-inner .ga-right {
+    animation-name: scroll-right; 
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.3333%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-33.3333%); }
+  to   { transform: translateX(0); }
+}
+
+.contact{
+    background-color: var(--color-gray-900);
+    padding: 25px;
+}
+
+.contact .form-container{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+.contact .form-container .left,
+.contact .form-container .right{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    
+}
+
+.contact .form-container .left .card{
+    background-color: var(--color-gray-800);
+    display: flex;
+    gap: 30px;
+    padding: 50px 35px;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: row;
+}
+
+.contact .form-container .left .card .icon{
+    background-color: var(--color-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .form-container .left .card .text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact .form-container .left .card .text h2{
+    font-family: "Days one" !important;
+    color: #fff;
+    font-size: 26px;
+}
+
+.contact .form-container .left .card .text h4{
+    color: var(--color-gray-400);
+    font-weight: 200;
+    font-size: 16px;
+}
+
+
+.contact .form-container .left .card.gradient-card{
+    background: linear-gradient(to right, var(--color-primary), var(--color-green-400));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact .form-container .left .card.gradient-card h1{
+    font-family: "Days one" !important;
+    font-size: 26px;
+} 
+
+.contact .form-container .left .card.gradient-card h4{
+    font-size: 16px;
+    font-weight: 400;
+} 
+
+.contact .form-container .left .card.gradient-card .icons{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.contact .form-container .left .card.gradient-card .icons i{
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact .form-container .left .card.gradient-card .icons i:hover{
+    background-color: rgba(11, 14, 19, 0.8);
+}
+
+.contact .form-container .right .contact-form{
+    background-color: var(--color-gray-800);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 15px;
+}
+
+.contact .form-container .right .contact-form .contact-header{
+    font-size: 28px;
+    font-family: "Days one" !important;
+    color: #fff;
+    font-weight: 900;
+}
+
+.contact .form-container .right .contact-form .input-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact .form-container .right .contact-form .input{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact .form-container .right .contact-form .input label{
+    color: var(--color-gray-300);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contact .form-container .right .contact-form .input input{
+    background-color: var(--color-gray-700);
+    border: var(--color-gray-600) 1px solid;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact .form-container .right .contact-form .input textarea{
+    background-color: var(--color-gray-700);
+    border: var(--color-gray-600) 1px solid;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    height: 140px;
+    resize: none;
+}
+
+.contact .form-container .right .contact-form .input input:focus,
+.contact .form-container .right .contact-form .input textarea:focus{
+    border: 1px var(--color-primary) solid;
+}
+
+.contact .form-container .right .contact-form .input-row .input.w-50{
+    width: 48% !important;
+}
+
+.contact .form-container .right .contact-form .input-row .input.w-100{
+    width: 100%;
+}
+
+.contact .form-container .right .contact-form .input select{
+    background-color: var(--color-gray-700);
+    border: var(--color-gray-600) 1px solid;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.contact .form-container .right .contact-form .checkbox{
+    display: flex;
+    gap: 10px;
+}
+
+.contact .form-container .right .contact-form .checkbox input{
+    width: 25px;
+}
+
+.contact .form-container .right .contact-form .checkbox h3{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-gray-400);
+}
+
+.contact .form-container .right .contact-form .submit button{
+    position: relative;
+    background-color: var(--color-primary);
+    outline: none;
+    border: none;
+    padding: 17px 31px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.contact .form-container .right .contact-form .submit button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120px;
+    background: linear-gradient(to right, transparent,rgba(255, 255, 255, 0.3),transparent);
+    width: 120px;
+    height: 100%;
+    transition: 0.3s linear;
+    transform: rotate(40deg);
+}
+
+.contact .form-container .right .contact-form .submit button:hover{
+    background-color: rgba(203, 254, 28, 0.9);
+}
+
+.contact .form-container .right .contact-form .submit button:hover::before{
+    left: calc(100% + 60px);
+}
+
+.contact .form-container .right .contact-form .line{
+    background-color: var(--color-gray-600);
+    height: 1px;
+    margin: 10px 0;
+}
+
+.contact .form-container .right .contact-form .form-footer{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.contact .form-container .right .contact-form .form-footer .form-footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    cursor: default;
+}
+
+.contact .form-container .right .contact-form .form-footer h3{
+    color: var(--color-primary);
+    font-size: 24px;
+}
+
+.contact .form-container .right .contact-form .form-footer p{
+    color: var(--color-gray-400);
+    font-size: 14px;
+}
+
+footer{
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-inner{
+    gap: 40px;
+    padding: 50px 32px 80px 32px;
+}
+
+footer .row{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+footer .row .col{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: var(--color-gray-400);
+}
+
+footer .row .col .col-green-header{
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+footer .row .col .col-green-header i{
+    margin-right: 5px;
+}
+
+footer .row .col .icons{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+footer .row .col .icons i{
+    font-size: 22px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+footer .row .col .icons i:hover{
+    color: var(--color-primary);
+}
+
+footer .row .col .col-header{
+    font-size: 22px;
+    color: #fff;
+    font-family: "Days one" !important;
+    font-weight: 900;
+}
+
+footer .row .col .col-links{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .row .col .col-links .link{
+    cursor: pointer;
+    width: fit-content;
+    transition: .2s ease;
+}
+
+footer .row .col .col-links .link:hover{
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+footer .line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-gray-600);
+}
+
+footer .row:nth-child(3){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-gray-400);
+    flex-wrap: nowrap;
+}
+
+footer .row:nth-child(3)>* {
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+footer .row:nth-child(3) .row-links{
+    display: flex;
+    gap: 15px;
+    
+}
+
+footer .row:nth-child(3) .row-links .link{ 
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+footer .row:nth-child(3) .row-links .link:hover{ 
+    color: var(--color-primary);
+}
+
+
+@media (max-width:1146px) {
+    header{
+        height: auto;
+        padding-bottom: 25px;
+    }
+
+    .header-inner{
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
+        padding: 32px;
+        justify-content: center;
+    }
+
+    .header-inner .col{
+        text-align: center;
+    }
+
+    .header-inner .col .buttons{
+        justify-content: center;
+    }
+}
+
+@media (max-width:960px) {
+    .contact .form-container{
+        flex-direction: column;
+    }
+
+    .contact .form-container .left,
+    .contact .form-container .right{
+        width: 100%;
+    }
+
+    footer .row{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .row .col{
+        width: 360px;
+    }
+}
+
+@media (max-width:724px) {
+    header .col .title{
+        font-size: 42px;
+    }
+
+    header .col p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:534px) {
+    header .col .buttons{
+        flex-direction: column;
+    }
+
+    header .col .buttons .button::before{
+        display: none;
+    }
+
+    header .col .img img{
+        width: 90vw;
+    }
+
+    header .col .img .active-players{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    section .title .white-title{
+        font-size: 42px;
+    }
+
+    .whatwedo .title .sub-title{
+        font-size: 32px;
+    }
+
+    .team .title,
+    .contact .title{
+        padding: 0 25px;
+    }
+
+    .team .title .sub-title, .contact .title .sub-title{
+        font-size: 16px;
+    }
+
+    section.contact .title .white-title{
+        font-size: 36px !important;
+    }
+
+    .contact .form-container .left .card{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact .form-container .left .card.gradient-card{
+        align-items: center;
+    }
+
+    .contact .form-container .right .contact-form{
+        padding: 40px 20px;
+    }
+
+    .contact .form-container .right .contact-form .contact-header{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .contact .form-container .right .contact-form .input-row{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contact .form-container .right .contact-form .input-row .input.w-50{
+        width: 100% !important;
+    }
+}
+
+@media (max-width:368px) {
+    header .col .title,
+    section .title .white-title{
+        font-size: 36px;
+    }
+
+    .whatwedo .title .sub-title{
+        font-size: 24px;
+    }
+
+    section .title .green-title{
+        font-size: 14px;
+    }
+
+    section .title .green-title::before{
+
+    }
+
+}
+
